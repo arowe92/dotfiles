@@ -1,0 +1,5 @@
+{
+  "bookmarks": ["~/", "~/Programs"],
+  "filter_regex": ["\\.DS_Store", "\\.git", "node_modules"],
+  "list_current_dir": true,
+}

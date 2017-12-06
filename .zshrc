@@ -3,6 +3,7 @@ export ZSH=/Users/alexrowe/.oh-my-zsh
 
 # Set name of the theme to load.
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="miloshadzic"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -92,7 +93,7 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 ## ALIASES
 alias alexrowe="ssh alexrowe@home.alexrowe.net"
 alias prg='cd ~/Programs'
-alias s='git status'
+alias s='git status 2>/dev/null || (pwd && ls -lF)'
 alias syn='cd ~/Programs/XCode/Synesthesia'
 alias gc='cd ~/Documents/gravity_current'
 alias PR='hub pull-request'
@@ -114,13 +115,14 @@ alias pa='pbpaste -pboard'
 alias gtree='git log --oneline --graph --all --decorate'
 alias diff='colordiff'
 alias dock='docker-compose'
-alias node-inspect='node --inspect-brk'
 alias pebble-build="pebble build && pebble install --cloudpebble &&  pebble logs --cloudpebble"
+alias vs=code
+alias erc='vim ~/.zshrc && source ~/.zshrc'
 
 ## Dumb these arent defauted
-alias pkill='pkill -l'
-alias pgrep='pgrep -l'
-alias vim='nvim -c start'
+alias pkill='pkill -lf'
+alias pgrep='pgrep -lf'
+alias vim='nvim'
 
 a () {
 	if [ -z $1 ]; then
@@ -134,9 +136,19 @@ pdf () {
   pdftohtml -stdout -i $1 | lynx -stdin;
 }
 
+# Characters
+SEGMENT_SEPARATOR="\ue0b0"
+PLUSMINUS="\u00b1"
+BRANCH="\ue0a0"
+DETACHED="\u27a6"
+CROSS="\u2718"
+LIGHTNING="\u26a1"
+GEAR="\u2699"
+
 ## PROMPT
 autoload -Uz colors && colors
-PROMPT='%{$fg[green]%}%n%{$reset_color%} %{$fg[yellow]%}%1~ %{$reset_color%}%{$fg[blue]%}$ '
+PROMPT=' %{$fg[yellow]%}%1~ %{$reset_color%}%{$fg[blue]%}⇒ '
+#PROMPT='%{ $fg[yellow]%1~ $reset_color$fg[blue]⇒ %}'
 _RPROMPT='%{$reset_color%}$(git_super_status) [%{$fg_no_bold[yellow]%}%~%{$reset_color%}]'
 RPROMPT="$_RPROMPT"
 
@@ -157,6 +169,9 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=0'
 export GOPATH=/usr/local/go
 export PATH="$PATH:$GOPATH/bin"
 
+# added by Miniconda3 installer
+export PATH="/Users/alexrowe/.miniconda3/bin:$PATH"
+
 ## FASD
 ###################################
 export _FASD_BACKENDS="native spotlight recently-used current"
@@ -174,7 +189,9 @@ alias zz='fasd_cd -d -i' # cd with interactive selection
 
 ## Program fasd alias
 alias af='fasd -a -e atom'
+alias sf='fasd -a -e subl'
 alias vf='fasd -a -e vim'
+alias cf='fasd -a -e cat'
 alias o='fasd -a -e open'
 alias C='fasd -a | head -n1 | sed "s{[^/]*/{/{" | pbcopy'
 
@@ -188,6 +205,7 @@ bindkey -s '^r' '`hist`\t'
 bindkey -s '^f' '`fasd -al | tail -r | peco`\t'
 bindkey -s '^b' '`git branch | sed "s/\*//g" | peco`\t'
 bindkey -s '^o' 'pbpaste | grep . | tail -n 10 | peco | pbcopy\n'
+bindkey -s '^a' 'subl .\n'
 
 bindkey '^P' up-history
 bindkey '^N' down-history

@@ -1,0 +1,29 @@
+{
+	"cc_include_options":
+	[
+		"-I/usr/local/include",
+		"-I/Users/alexrowe/.miniconda/include",
+		"-I/Users/alexrowe/.miniconda/include/qt"
+	],
+	"color_scheme": "Packages/User/SublimeLinter/Material Dracula (SL).tmTheme",
+	"draw_white_space": "all",
+	"folder_exclude_patterns":
+	[
+		"node_modules/",
+		"\\.git"
+	],
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Clang-Complete",
+		"Six",
+		"Vintage",
+		"Vintageous"
+	],
+	"tab_size": 2,
+	"theme": "Material Dracula.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintageous_hlsearch": true,
+	"vintageous_use_ctrl_keys": true
+}

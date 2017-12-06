@@ -1,0 +1,142 @@
+[
+	{
+		"keys": ["control+super+h"],
+		"command": "unindent"
+	},
+	{
+		"keys": ["control+super+j"],
+		"command": "ternjs_jump_to_definition"
+	},
+	{
+		"keys": ["control+super+j"],
+		"command": "swap_line_down"
+	},
+	{
+		"keys": ["control+super+k"],
+		"command": "swap_line_up"
+	},
+	{
+		"keys": ["control+super+l"],
+		"command": "indent"
+	},
+	{
+		"keys": ["shift+super+c"],
+		"command": "cancel_build"
+	},
+	{
+		"keys": ["shift+super+k", "super+shift+j"],
+		"command": "carry_file_to_pane", "args": {"direction": "left"}
+	},
+	{
+		"keys": ["shift+super+k", "super+shift+k"],
+		"command": "carry_file_to_pane", "args": {"direction": "down"}
+	},
+	{
+		"keys": ["shift+super+k", "super+shift+l"],
+		"command": "carry_file_to_pane", "args": {"direction": "right"}
+	},
+	{
+		"keys": ["super+\\"],
+		"command": "toggle_side_bar"
+	},
+	{
+		"keys": ["super+enter"],
+		"command": "hermes_execute_block"
+	},
+	{
+		"keys": ["super+k", "b"],
+		"command": "toggle_bookmark"
+	},
+	{
+		"keys": ["super+k", "c", "a"],
+		"command": "keep", "args": {"keep": "ancestor"}
+	},
+	{
+		"keys": ["super+k", "c", "l"],
+		"command": "list_conflict_files"
+	},
+	{
+		"keys": ["super+k", "c", "n"],
+		"command": "find_next_conflict"
+	},
+	{
+		"keys": ["super+k", "c", "o"],
+		"command": "keep", "args": {"keep": "ours"}
+	},
+	{
+		"keys": ["super+k", "c", "t"],
+		"command": "keep", "args": {"keep": "theirs"}
+	},
+	{
+		"keys": ["super+k", "ctrl+b"],
+		"command": "clear_bookmarks"
+	},
+	{
+		"keys": ["super+k", "d"],
+		"command": "destroy_pane", "args": {"direction": "self"}
+	},
+	{
+		"keys": ["super+k", "i"],
+		"command": "travel_to_pane", "args": {"direction": "up"}
+	},
+	{
+		"keys": ["super+k", "j"],
+		"command": "travel_to_pane", "args": {"direction": "left"}
+	},
+	{
+		"keys": ["super+k", "k"],
+		"command": "travel_to_pane", "args": {"direction": "down"}
+	},
+	{
+		"keys": ["super+k", "l"],
+		"command": "travel_to_pane", "args": {"direction": "right"}
+	},
+	{
+		"keys": ["super+k", "n"],
+		"command": "next_bookmark"
+	},
+	{
+		"keys": ["super+k", "super+b"],
+		"command": "select_all_bookmarks"
+	},
+	{
+		"keys": ["super+k", "super+i"],
+		"command": "create_pane", "args": {"direction": "up"}
+	},
+	{
+		"keys": ["super+k", "super+j"],
+		"command": "create_pane", "args": {"direction": "left"}
+	},
+	{
+		"keys": ["super+k", "super+k"],
+		"command": "create_pane", "args": {"direction": "down"}
+	},
+	{
+		"keys": ["super+k", "super+l"],
+		"command": "create_pane", "args": {"direction": "right"}
+	},
+	{
+		"keys": ["super+k", "super+m"],
+		"command": "prev_bookmark"
+	},
+	{
+		"keys": ["super+k", "super+n"],
+		"command": "next_bookmark"
+	},
+	{
+		"keys": ["super+k", "super+shift+i"],
+		"command": "carry_file_to_pane", "args": {"direction": "up"}
+	},
+	{
+		"keys": ["super+w"],
+		"command": "force_close"
+	},
+	// Format Document
+	{ "keys": ["super+u"], "command": "uncrustify_document" },
+	// Format Selection
+	{ "keys": ["super+i"], "command": "uncrustify_selection" },
+	[
+	// Format Document
+	{ "keys": ["alt+u"], "command": "uncrustify_document" },
+]
+]

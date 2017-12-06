@@ -39,9 +39,7 @@ call plug#end()
 
 " Settings
 set wrap
-set tabstop=2
 set shiftwidth=2
-set expandtab
 set autoindent
 set number
 set backspace=indent,eol,start
@@ -55,9 +53,11 @@ set showcmd
 set showmatch
 set autowrite
 set mouse=a
-set paste
+set nopaste
 set wildmenu
 set wildchar=<Tab>
+set tabstop=2
+set expandtab
 
 " Swap file location
 set directory^=/tmp/
@@ -92,8 +92,8 @@ let g:syntastic_check_on_wq = 0
 " Key Mappings
 nnoremap <C-\> :NERDTreeToggle<CR>
 nnoremap <S-C-p> :CtrlP<CR>
-nnoremap <C-c> :qall<CR>
-nnoremap <S-C-c> :wqall<CR>
+nnoremap <C-c> :echo 'ctrl-c twice to quit'<CR>
+nnoremap <C-c><C-c> :qall!<CR>
 nnoremap <S-Tab> :tabn<CR> 
 nnoremap <C-W> :q<CR>
 
@@ -109,6 +109,11 @@ nnoremap <C-K>k <C-W><C-J>
 nnoremap <C-K>i <C-W><C-K>
 nnoremap <C-K>l <C-W><C-L>
 nnoremap <C-K>j <C-W><C-H>
+
+nnoremap <C-K><C-L> <C-W>v
+nnoremap <C-K><C-J> <C-W>v
+nnoremap <C-K><C-I> <C-W>s
+nnoremap <C-K><C-K> <C-W>s
 
 " Easier Commands
 nnoremap ; :

@@ -1,0 +1,4 @@
+{
+ "uncrustify_executable" : "/usr/local/bin/uncrustify",
+ "uncrustify_config": "/Users/alexrowe/.config/uncrustify/cpp.cfg"
+}

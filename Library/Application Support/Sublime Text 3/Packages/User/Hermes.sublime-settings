@@ -1,0 +1,9 @@
+{
+  "connections": [
+    {
+      "name": "localhost", 
+      "url": "http://localhost:8888",
+      "token": "a"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "cmd": ["cd ../build && qmake .. && make && open *.app"],
+  "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
+  "selector": "source.cpp",
+  "shell": true,
+
+  "variants": [
+
+      {
+        "cmd": ["/Users/alexrowe/.miniconda3/bin/qmake -project && subl *.pro"],
+        "name": "New Project",
+        "shell": true,
+      },
+
+
+      {
+        "cmd": ["make clean"],
+        "name": "Clean",
+        "shell": true,
+      }
+
+    ]
+}
+
+
+// To run. Download the zip fie and extract it into sublime text packages or create a file called Qt.sublime-build and
+// Copy this code into the file.
+//
+// How to run
+//Choose the Qt from the build systems. You use Ctrl Shift B to build the file.
+// Note: subl on the second line is the path to the sublime text executable.
+//You can change it if it isn't the right path to sublime text.
+// Add the necessary things in the .pro file, save and close the .pro file..
+// Finally press Ctrl Shift B again and this time Choose Qt-Run among the build system variant.
+
+
+// If that doesn't work you need to specify the path to the qmake build system using "whereis qmake" from the terminal as well as the path to sublime text.
+
+// Alternatively uncomment the belowtry this:
+
+// {
+//   "cmd": ["pathtoqmake -project && gedit *.pro"],
+//   "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
+//   "selector": "source.cpp",
+//   "shell": true,
+
+//   "variants": [
+
+//      {
+//        "name": "Run",
+//        "cmd": ["pathtoqmake && make && ./$file_base_name"],
+//        "shell": true,
+//      }
+
+//     ]
+// }
